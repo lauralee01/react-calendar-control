@@ -7,10 +7,10 @@ react-calendar-control for your react projects. Very customizable!
 
 ```
 import React from 'react'
-import { ReactCalendarControl } from 'react-calendar-control'
+import { Calendar } from 'react-calendar-control'
 
 const App = () => {
-  return <ReactCalendarControl />
+  return <Calendar />
 }
 
 ```
