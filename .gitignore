@@ -10,7 +10,7 @@
 
 # builds
 build
-dist
+/dist
 
 # production
 /build
