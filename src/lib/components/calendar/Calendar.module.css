@@ -31,12 +31,10 @@
 }
 .monthDates {
   font-size: 20px;
-  padding: 0 2rem;
   color: #000;
 }
 .noDates {
   font-size: 20px;
-  padding: 0 2rem;
   color: #ccc;
   pointer-events: none;
 }
@@ -61,12 +59,10 @@
   grid-auto-rows: minmax(20px, auto);
 }
 .weektext {
-  padding: 1.5rem 2rem;
   text-transform: uppercase;
 }
 .info {
   border: 1px solid #eee;
-  padding: 1.5rem 0;
   cursor: pointer;
   text-align: center;
 }
