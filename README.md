@@ -6,11 +6,16 @@ react-calendar-control for your react projects. Very customizable!
 ## Usage
 
 ```
-import React from 'react'
+import React, { useState } from 'react'
 import { Calendar } from 'react-calendar-control'
 
 const App = () => {
-  return <Calendar />
+    const [value, onChange] = useState(new Date());  
+
+    return <Calendar onChange={onChange} value={value} isRange />
 }
 
 ```
+
+## Props
+

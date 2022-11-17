@@ -30,7 +30,10 @@ export const Calendar = ({isRange, onChange, value}) => {
     if (selectedDate) {
       setAllDates((prevDates) => [...prevDates, new Date(selectedDate)]);
     }
-  }, [selectedDate]);
+    if(!isRange) {
+      onChange(selectedDate)
+    }
+  }, [selectedDate, isRange, onChange]);
 
   const renderDateHeader = () => {
     switch (selectedDateFormat) {
@@ -140,7 +143,7 @@ export const Calendar = ({isRange, onChange, value}) => {
       setAllDates((prevDates) => prevDates.slice(0, -1));
     }
     setSelectedDate(() => newDate);
-    onChange(selectedDate)
+   
     if(isRange) {
       onChange(allDates)
     }

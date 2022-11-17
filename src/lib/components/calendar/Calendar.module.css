@@ -41,7 +41,8 @@
 .today {
   font-weight: bold;
   border-radius: 8px;
-  padding: 0.5rem;
+  width: 40px;
+  height: 26px;
   display: inline-block;
   background-color: #eee;
 }
