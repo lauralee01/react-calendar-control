@@ -19,7 +19,7 @@ const App = () => {
 
 ## Props
 
-```
+
 
 | Prop name | Description | Type | Default value |
 | :--------- | :----------- | :---- | :------------- |
@@ -29,4 +29,3 @@ const App = () => {
 | value     | Calendar value. Can be either one value or an array of two values. | new Date() | null |
 
 
-```
