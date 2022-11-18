@@ -17,7 +17,7 @@ import {
 import Styles from "./Calendar.module.css";
 import { KeyboardArrowLeft, KeyboardArrowRight } from "@mui/icons-material";
 
-export const Calendar = ({isRange, onChange, value}) => {
+export const Calendar = ({ isRange, onChange, value }) => {
   const [date, setDate] = useState(new Date());
   const [selectedDateFormat, setSelectedDateFormat] = useState("month");
   const [fullDateFormat] = useState("d MMMM yyyy");
@@ -30,8 +30,8 @@ export const Calendar = ({isRange, onChange, value}) => {
     if (selectedDate) {
       setAllDates((prevDates) => [...prevDates, new Date(selectedDate)]);
     }
-    if(!isRange) {
-      onChange(selectedDate)
+    if (!isRange) {
+      onChange(selectedDate);
     }
   }, [selectedDate, isRange, onChange]);
 
@@ -66,9 +66,7 @@ export const Calendar = ({isRange, onChange, value}) => {
               data-testid={format(addMonths(startDate, i), dateFormat)}
               onClick={() => getMonthOfYear(i)}
             >
-              <p>
-                {format(addMonths(startDate, i), dateFormat)}
-              </p>
+              <p>{format(addMonths(startDate, i), dateFormat)}</p>
             </div>
           );
         }
@@ -100,7 +98,10 @@ export const Calendar = ({isRange, onChange, value}) => {
                 onClick={() => isDateActive(days[i].key, monthStart, monthEnd)}
                 value={value}
                 onMouseOver={() => {
-                  allDates[0] && !endDate && updateDateRange(days[i].key);
+                  isRange &&
+                    allDates[0] &&
+                    !endDate &&
+                    updateDateRange(days[i].key);
                 }}
               >
                 <p className={`${Styles.weektext} ${i > 6 && Styles.box}`}>
@@ -143,9 +144,9 @@ export const Calendar = ({isRange, onChange, value}) => {
       setAllDates((prevDates) => prevDates.slice(0, -1));
     }
     setSelectedDate(() => newDate);
-   
-    if(isRange) {
-      onChange(allDates)
+
+    if (isRange) {
+      onChange(allDates);
     }
   };
 

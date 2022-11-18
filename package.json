@@ -1,9 +1,12 @@
 {
   "name": "react-calendar-control",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "main": "dist/index.js",
   "module": "dist/index.js",
-  "files": [ "dist", "README.md" ],
+  "files": [
+    "dist",
+    "README.md"
+  ],
   "repository": {
     "type": "git",
     "url": "lauralee01/react-calendar-control"
@@ -19,6 +22,7 @@
     "@testing-library/user-event": "^13.5.0",
     "date-fns": "^2.29.3",
     "prop-types": "^15.8.1",
+    "react-calendar-control": "^0.1.3",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
