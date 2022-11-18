@@ -19,12 +19,9 @@ const App = () => {
 
 ## Props
 
-
-
 | Prop name | Description | Type | Default value |
 | :--------- | :----------- | :---- | :------------- |
-| isRange   | Whether the user shall select two dates forming a range instead of one. | boolean | false |
-|             Note. This feature will make React-Calendar-Control return an array with two dates |   |   |
+| isRange   | Whether the user shall select two dates forming a range instead of one. Note. This feature will make React-Calendar-Control return an array with two dates| boolean | false |
 | onChange  | Function called when the user clicks an item (day on month view) | function | n/a |
 | value     | Calendar value. Can be either one value or an array of two values. | new Date() | null |
 
